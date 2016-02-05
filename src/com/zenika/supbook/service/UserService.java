@@ -16,7 +16,7 @@ public class UserService {
 		PreparedStatement ps = null;
 		try {
 
-			ps = cx.prepareStatement("INSERT INTO USER( LOGIN, EMAIL ) VALUES ( ?, ? ) ");
+			ps = cx.prepareStatement("INSERT INTO USER( LOGIN, EMAIL, PSW ) VALUES ( ?, ?, ? ) ");
 			ps.setString(1, user.getLogin());
 			ps.setString(2, user.getEmail());
 			ps.executeUpdate();
